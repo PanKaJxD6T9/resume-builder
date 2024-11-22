@@ -53,6 +53,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.cl-internal-1dauvpw{
+  display: none !important;
+}
+
+.cl-internal-1hp5nqm{
+  display: none !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
