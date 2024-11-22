@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import { Navigate, Outlet } from 'react-router-dom'
 import { useUser } from '@clerk/clerk-react';
+import Header from './components/layout/Header';
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <div className='w-full h-screen'>
+      <Header />
       <Outlet />
     </div>
   )

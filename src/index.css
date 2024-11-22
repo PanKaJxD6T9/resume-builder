@@ -61,6 +61,54 @@ button:focus-visible {
   display: none !important;
 }
 
+.cl-internal-4x6jej{
+  display: none !important;
+}
+
+.cl-providerIcon__github{
+  filter: invert(1);
+}
+
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+
+.cl-logoBox {
+  height: 40px;
+}
+.cl-dividerLine {
+  background: #252a41;
+  height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+  border: 3px solid #565761;
+}
+
+.cl-internal-wkkub3 {
+  color: white;
+}
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+.cl-internal-1dauvpw{
+  display: none
+}
+
+.cl-internal-1hp5nqm{
+  display: none
+}
+
+.cl-internal-15di0mo,
+.cl-internal-4x6jej{
+  color: white !important;
+}
+
+.cl-internal-1rpdi70{
+  display: none !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
