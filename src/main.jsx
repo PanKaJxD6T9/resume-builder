@@ -8,7 +8,14 @@ import HomePage from './home';
 import Dashboard from './dashboard';
 import { ClerkProvider } from '@clerk/clerk-react';
 
-const router = createBrowserRouter([
+const publicRoutes = [
+  {
+    path: "/auth/sign-in",
+    element: <SignInPage />,
+  }
+]
+
+const protectedRoutes = [
   {
     element: <App />,
     children: [
@@ -21,12 +28,10 @@ const router = createBrowserRouter([
         element: <Dashboard />
       }
     ]
-  },
-  {
-    path: "/auth/sign-in",
-    element: <SignInPage />,
-  },
-]);
+  }
+]
+
+const router = createBrowserRouter([...publicRoutes, ...protectedRoutes]);
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -36,7 +41,8 @@ if (!PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ClerkProvider appearance={{
+    <ClerkProvider 
+      appearance={{
         variables: {
           colorText: "#fff",
           colorPrimary: "#0E78F9",
@@ -44,7 +50,9 @@ createRoot(document.getElementById('root')).render(
           colorInputBackground: "#252A41",
           colorInputText: "#fff",
         },
-      }} publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+      }} 
+      publishableKey={PUBLISHABLE_KEY}
+    >
       <RouterProvider router={router} />
     </ClerkProvider>
   </StrictMode>,

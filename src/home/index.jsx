@@ -4,7 +4,7 @@ import React from 'react'
 function HomePage() {
   return (
     <div>
-        <UserButton />
+        Landing Page
     </div>
   )
 }
