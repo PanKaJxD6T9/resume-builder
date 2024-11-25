@@ -31,7 +31,11 @@ const protectedRoutes = [
   }
 ]
 
-const router = createBrowserRouter([...publicRoutes, ...protectedRoutes]);
+const router = createBrowserRouter([...publicRoutes, ...protectedRoutes], {
+  future: {
+    v7_startTransition: true
+  }
+});
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 

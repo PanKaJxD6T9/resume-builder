@@ -143,6 +143,28 @@ button:focus-visible {
   display: none !important;
 }
 
+.cl-internal-1o11va6:hover{
+  color: #7FD5A2 !important;
+  outline: none !important;
+}
+
+.cl-internal-4ammvw,
+.cl-internal-1nn89fl{
+  color: white !important;
+  outline: none !important;
+}
+
+.cl-internal-4ammvw:hover,
+.cl-internal-1nn89fl:hover{
+  outline: none !important;
+  color: #7FD5A2 !important
+}
+
+.cl-internal-1lnl7p1:focus{
+  outline: none !important;
+  color: #7FD5A2 !important
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
