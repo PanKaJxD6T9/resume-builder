@@ -7,6 +7,7 @@ import SignInPage from './auth/sign-in';
 import HomePage from './home';
 import Dashboard from './dashboard';
 import { ClerkProvider } from '@clerk/clerk-react';
+import ResumeEdit from './dashboard/resume/[resumeId]/edit';
 
 const publicRoutes = [
   {
@@ -26,6 +27,10 @@ const protectedRoutes = [
       {
         path: "/dashboard",
         element: <Dashboard />
+      },
+      {
+        path: "/dashboard/resume/:resumeId/edit",
+        element: <ResumeEdit />
       }
     ]
   }

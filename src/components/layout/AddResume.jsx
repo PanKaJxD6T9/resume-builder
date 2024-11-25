@@ -13,6 +13,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import GlobalApi from '@/api/GlobalApi';
 import { useUser } from '@clerk/clerk-react';
+import { useNavigate } from 'react-router-dom';
 
 
 const AddResume = () => {
@@ -21,6 +22,7 @@ const AddResume = () => {
   const [resumeTitle, setResumeTitle] = useState();
   const {user} = useUser();
   const [loading, setLoading] = useState(false);
+  const navigation = useNavigate();
 
   const onCreate = async()=>{
     setLoading(true);
@@ -36,8 +38,8 @@ const AddResume = () => {
     }
 
     GlobalApi.createNewResume(data).then((res)=>{
-      console.log(res);
       if(res){
+        navigation(`/dashboard/resume/${uuid}/edit`);
         setLoading(false);
         setOpenDialog(false);
       }
@@ -47,12 +49,13 @@ const AddResume = () => {
   }
 
   return (
-    <div>
+    <div className='w-full flex flex-col items-center justify-center'>
       <div
-        className="p-14 py-24 border-2 border-[#7BD197] rounded-lg bg-secondary flex items-center justify-center h-[320px] w-[280px] hover:scale-105 transition-all hover:shadow-md cursor-pointer border-dashed" onClick={() => setOpenDialog(true)}
+        className="p-14 py-24 border-2 border-[#7BD197] rounded-lg bg-secondary flex items-center justify-center h-[320px] w-[280px] hover:shadow-md cursor-pointer border-dashed" onClick={() => setOpenDialog(true)}
       >
         <PlusCircle />
       </div>
+      <h2 className='text-xl font-semibold text-center mt-1 space-grotesk'>Create New Resume</h2>
       <Dialog open={openDialog} onOpenChange={()=>setOpenDialog(false)}>
         <DialogContent>
           <DialogHeader>

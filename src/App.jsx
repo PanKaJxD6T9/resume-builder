@@ -11,7 +11,7 @@ const App = () => {
   // Allow home page (/) to be accessed without authentication
   if (location.pathname === '/') {
     return (
-      <div className='w-full h-screen'>
+      <div className=''>
         <Header />
         <Outlet />
       </div>
