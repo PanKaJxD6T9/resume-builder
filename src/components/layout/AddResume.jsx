@@ -39,7 +39,7 @@ const AddResume = () => {
 
     GlobalApi.createNewResume(data).then((res)=>{
       if(res){
-        navigation(`/dashboard/resume/${uuid}/edit`);
+        navigation(`/dashboard/resume/${res.data.data.resumeId}/edit`);
         setLoading(false);
         setOpenDialog(false);
       }
