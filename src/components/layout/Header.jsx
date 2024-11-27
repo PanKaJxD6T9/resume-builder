@@ -9,7 +9,7 @@ const Header = () => {
     const location = useLocation();
 
   return (
-    <div className="p-3 px-5 flex items-center justify-between shadow-md">
+    <div className="relative p-3 px-5 flex items-center justify-between shadow-md">
       <div className='flex items-center gap-3'>
       <img src="/logo.svg" alt="Logo" width={50} height={50} className='max-md:w-10 max-md:h-10 max-sm:w-8 max-sm:h-8'/>
       <h2 className='text-3xl font-normal edu-au-vic-wa-nt-arrows max-md:text-xl max-sm:text-lg'>AI&nbsp;&nbsp;Resume&nbsp;&nbsp;Builder</h2>

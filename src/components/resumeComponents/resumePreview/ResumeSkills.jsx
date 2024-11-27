@@ -9,8 +9,8 @@ const ResumeSkills = ({resumeInfo}) => {
             resumeInfo?.skills.map((skill, index)=>(
                 <div key={index} className='my-4'>
                     <h2 className='text-lg font-semibold space-grotesk'>{skill.name}</h2>
-                    <div className='my-2 w-full h-3 rounded-lg bg-zinc-300'>
-                        <div className={`w-[${skill.rating}%] h-full rounded-lg`} style={{backgroundColor: `${resumeInfo?.themeColor}`}}></div>
+                    <div className='w-full h-3 bg-zinc-200 rounded-lg my-2 overflow-hidden'>
+                        <div className='h-full' style={{backgroundColor: `${resumeInfo.themeColor}`, width: `${skill.rating}%`}}></div>
                     </div>
 
                 </div>
