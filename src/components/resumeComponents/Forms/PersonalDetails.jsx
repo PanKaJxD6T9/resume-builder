@@ -78,7 +78,8 @@ const PersonalDetails = ({enableNextTab}) => {
                     <Input type='email' name='email' defaultValue={resumeInfo?.email} required onChange={handleChange}/>
                 </div>
             </div>
-            <div className='flex justify-end'>
+            <div className='flex justify-between items-center'>
+                <h2 className='text-red-600'>* Add Some changes to save and move next</h2>
                 <Button disabled={loading} type='submit' className='bg-[#7BD197] hover:bg-[#7BD197]/90 text-black outline-none focus:outline-none space-grotesk text-lg flex gap-2 justify-center items-center'>{loading ? <LoaderCircle className='animate-spin'/> : "Save"}<Save /></Button>
             </div>
         </form>

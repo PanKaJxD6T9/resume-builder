@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PersonalDetails from './Forms/PersonalDetails'
 import { Button } from '../ui/button'
 import { ArrowLeft, ArrowRight, LayoutGrid } from 'lucide-react'
+import Summary from './Forms/Summary'
 
 const FormSection = () => {
 
@@ -23,7 +24,8 @@ const FormSection = () => {
       {/* Personal Details Rendering Based on TabIndex */}
 
       {
-        activeTabIndex === 1 ? <PersonalDetails enableNextTab={(v)=>setEnableNextTab(v)} /> : null
+        activeTabIndex === 1 ? <PersonalDetails enableNextTab={(v)=>setEnableNextTab(v)} /> : 
+        activeTabIndex === 2 ? <Summary enableNextTab={(v)=>setEnableNextTab(v)} /> : null
       }
     </div>
   )
